@@ -98,6 +98,9 @@ public class Commands {
                 sb.append("Get seen m8");
                 chr.announce(MaplePacketCreator.getNPCTalk(1032104, (byte) 0, sb.toString(), "00 00", (byte) 0));
                 break;}
+            case "style":{
+                chr.setHair(Integer.parseInt(sub[1]));
+                break;}
             default:
                 if (chr.gmLevel() == 0) {
                     chr.yellowMessage("Player Command " + heading + sub[0] + " does not exist");
