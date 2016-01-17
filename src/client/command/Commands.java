@@ -88,11 +88,16 @@ public class Commands {
             case "map":
                 chr.message("" + chr.getMap().getId());
                 break;
-            case "god":
+            case "god":{
                 StringBuilder sb = new StringBuilder();
                 sb.append("Fuck you! Get Rekt");
                 chr.announce(MaplePacketCreator.getNPCTalk(9010000, (byte) 0, sb.toString(), "00 00", (byte) 0));
-                break;
+                break;}
+            case "kaixin":{
+                StringBuilder sb = new StringBuilder();
+                sb.append("Get seen m8");
+                chr.announce(MaplePacketCreator.getNPCTalk(1032104, (byte) 0, sb.toString(), "00 00", (byte) 0));
+                break;}
             default:
                 if (chr.gmLevel() == 0) {
                     chr.yellowMessage("Player Command " + heading + sub[0] + " does not exist");
